@@ -249,6 +249,161 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/10/eclipse中启动tomcat时-出现404/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zjm">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/02/10/eclipse中启动tomcat时-出现404/" itemprop="url">eclipse中启动tomcat时 出现404</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-10T16:19:23+08:00">
+                2019-02-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/02/10/eclipse中启动tomcat时-出现404/" class="leancloud_visitors" data-flag-title="eclipse中启动tomcat时 出现404">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="问题描述："><a href="#问题描述：" class="headerlink" title="问题描述："></a>问题描述：</h1><p>   用eclipse打开运行tomcat时或输入<a href="https://localhost:8080/，显示404页面。当关闭eclipse后，手动打开tomcat再输入https://localhost:8080/显示的是tomcat的界面。" target="_blank" rel="noopener">https://localhost:8080/，显示404页面。当关闭eclipse后，手动打开tomcat再输入https://localhost:8080/显示的是tomcat的界面。</a></p>
+<h1 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h1><h2 id="第一步："><a href="#第一步：" class="headerlink" title="第一步："></a>第一步：</h2><p>   打开eclipse的下面的server（双击）<br><img src="/images/4.png" alt=""></p>
+<h2 id="第二步："><a href="#第二步：" class="headerlink" title="第二步："></a>第二步：</h2><p><img src="/images/5.png" alt=""><br><img src="/images/6.png" alt=""><br>   1.如果页面上的1中的那三个选项可选的话，就选择第二个选项Use Tomcat installation然后在2中将wptwebapps改为webapps重启eclipse后运行就可以了<br>   2.如果页面上1区域的三个选项不可选的话，删除安装tomcat文件下的webapps,重启eclipse重复上面操作。如果2操作还不能选择则再点击clean选项。<br>   3.如果还是不行可以试一下，先移除tomcat下的项目，再开始从第一个开始尝试。</p>
+<h2 id="最后："><a href="#最后：" class="headerlink" title="最后："></a>最后：</h2><p><img src="/images/7.png" alt=""><br>  在server options中勾选第二个选项publish。。。。</p>
+<h1 id="造成问题的其他可能和解决方法"><a href="#造成问题的其他可能和解决方法" class="headerlink" title="造成问题的其他可能和解决方法"></a>造成问题的其他可能和解决方法</h1><p>1.run as 中的run on server ,然后看到一个框架，别点finish,点击next，然后又出来个界面，有2个框，一个左边的是Available,右边的是Configured，看看右边这个框里是不是只有你的项目名，确定之后，finish,然后运行<br>2.<a href="https://blog.csdn.net/x123453316/article/details/80951239" target="_blank" rel="noopener">jsp文件位置</a><br>3.<a href="https://blog.csdn.net/u010587724/article/details/78912255" target="_blank" rel="noopener">其他方法</a></p>
+<h1 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h1><p><a href="https://blog.csdn.net/yhl_jxy/article/details/50422011?utm_source=copy" target="_blank" rel="noopener">eclipse+tomcat启动访问报404</a><br><a href="https://blog.csdn.net/lx678111/article/details/83062832" target="_blank" rel="noopener">eclipse 配置完tomcat 访问tomcat报404</a><br><a href="https://blog.csdn.net/qq_35609057/article/details/78981456" target="_blank" rel="noopener">轻松解决 eclipse 中启动tomcat时 出现404错误</a><br><a href="https://blog.csdn.net/hao134838/article/details/52467783" target="_blank" rel="noopener">解决eclipse中tomcat提示404问题</a><br><a href="https://blog.csdn.net/u011637069/article/details/53463490" target="_blank" rel="noopener">Eclipse中启动tomcat访问404解决及原因</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/23/数据库常用特殊语句/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1070,7 +1225,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
